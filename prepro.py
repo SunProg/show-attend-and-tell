@@ -14,7 +14,7 @@ import json
 def _process_caption_data(caption_file, image_dir, max_length):
     with open(caption_file) as f:
         caption_data = json.load(f)
-
+    print "caption_data is loaded"
     # id_to_filename is a dictionary such as {image_id: filename]} 
     id_to_filename = {image['id']: image['file_name'] for image in caption_data['images']}
 
